@@ -1,0 +1,23 @@
+{
+  "name": "@lq-dev/core",
+  "version": "1.0.0",
+  "description": "core",
+  "author": "linqi <linqi@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"run testing from core\" "
+  },
+  "dependencies": {
+    "@lq-dev/utils": "^1.0.0",
+    "linqi-cli": "^1.0.0"
+  }
+}
