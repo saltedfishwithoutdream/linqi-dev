@@ -1,6 +1,6 @@
 {
   "name": "@lq-dev/utils",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "utils",
   "author": "linqi <linqi@qq.com>",
   "homepage": "",
@@ -19,5 +19,5 @@
   "dependencies": {
     "linqi-cli": "^1.0.0"
   },
-  "gitHead": "0ecf9e67b238e98456b23d40c78dc4ca8fce73af"
+  "gitHead": "6f4e613ae4c0acd6c08c3742f82f9400b8e69021"
 }
