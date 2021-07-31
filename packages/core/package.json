@@ -23,5 +23,8 @@
     "@lq-dev/utils": "^1.0.3",
     "linqi-cli": "^1.0.0"
   },
-  "gitHead": "6f4e613ae4c0acd6c08c3742f82f9400b8e69021"
+  "gitHead": "7937229af8fb899ffa9860136d1af88fb376bec2",
+  "publishConfig": {
+    "access": "public"
+  }
 }
