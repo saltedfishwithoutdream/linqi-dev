@@ -18,5 +18,6 @@
   },
   "dependencies": {
     "linqi-cli": "^1.0.0"
-  }
+  },
+  "gitHead": "0ecf9e67b238e98456b23d40c78dc4ca8fce73af"
 }
