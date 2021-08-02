@@ -17,7 +17,6 @@
     "test": "echo \"run testing from utils\" "
   },
   "dependencies": {
-    "linqi-cli": "^1.0.0"
   },
   "gitHead": "7937229af8fb899ffa9860136d1af88fb376bec2",
   "publishConfig": {

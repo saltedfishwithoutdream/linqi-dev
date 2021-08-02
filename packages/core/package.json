@@ -20,8 +20,7 @@
     "test": "echo \"run testing from core\" "
   },
   "dependencies": {
-    "@lq-dev/utils": "^1.0.3",
-    "linqi-cli": "^1.0.0"
+    "@lq-dev/utils": "file:../utils"
   },
   "gitHead": "7937229af8fb899ffa9860136d1af88fb376bec2",
   "publishConfig": {
