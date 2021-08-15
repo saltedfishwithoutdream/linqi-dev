@@ -20,7 +20,20 @@
     "test": "echo \"run testing from core\" "
   },
   "dependencies": {
-    "@lq-dev/utils": "file:../utils"
+    "@lq-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "@lq-dev/log": "file:../../utils/log",
+    "@lq-dev/init": "file:../../commands/init",
+    "@lq-dev/exec": "file:../exec",
+    "colors": "^1.4.0",
+    "commander": "^8.1.0",
+    "dotenv": "^10.0.0",
+    "import-local": "^3.0.2",
+    "minimist": "^1.2.5",
+    "npmlog": "^5.0.0",
+    "path-exists": "^4.0.0",
+    "root-check": "1.0.0",
+    "semver": "^7.3.5",
+    "user-home": "^3.0.0"
   },
   "gitHead": "7937229af8fb899ffa9860136d1af88fb376bec2",
   "publishConfig": {

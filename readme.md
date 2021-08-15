@@ -1,0 +1,1 @@
+lq init a --targetPath /home/linqi/Desktop/scaffold/lq-cli/lq-dev/commands/init -d
