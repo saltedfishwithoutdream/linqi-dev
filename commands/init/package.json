@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "@lq-dev/command": "file:../../models/command",
-    "@lq-dev/log": "file:../../utils/log"
+    "@lq-dev/log": "file:../../utils/log",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.1.2"
   }
 }

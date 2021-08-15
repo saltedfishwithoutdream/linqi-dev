@@ -1,8 +1,11 @@
 'use strict';
 
+const fs = require('fs')
+const inquirer = require('inquirer')
+const fse = require('fs-extra')
+
 const Command = require('@lq-dev/command')
 const log = require('@lq-dev/log')
-const fs = require('fs')
 
 class InitCommand extends Command {
     init () {
@@ -12,11 +15,11 @@ class InitCommand extends Command {
         log.verbose('force', this.force)
     }
 
-    exec () {
+    async exec () {
         console.log('init的业务逻辑')
         try {
             // 准备阶段
-            this.prepare()
+            await this.prepare()
             // 下载模板 
             // 安装模板
         } catch (e) {
@@ -26,17 +29,44 @@ class InitCommand extends Command {
 
     }
 
-    prepare () {
+    async prepare () {
+        const localPath = process.cwd()
         // 判断当前目录是否为空
-        const ret = this.isCwdEmpty()
-        console.log('目录为空？', ret)
+        if (!this.isDirEmpty(localPath)) {
+            // 不为空，询问用户是否继续创建
+            const { ifContinue } = await inquirer.prompt({
+                type: 'confirm',
+                name: 'ifContinue',
+                default: false,
+                message: '当前文件夹不为空，是否继续创建项目？'
+                
+            })
+            
+
+            if (ifContinue) {
+                // 让用户二次确认
+                const {confirmDelete} = await inquirer.prompt({
+                    type: 'confirm',
+                    name: 'confirmDelete',
+                    default: false,
+                    message: '是否确认清空当前目录下的文件？'
+                })
+                if (confirmDelete) {
+                    // 清空当前目录
+                    fse.emptyDirSync(localPath)
+                }
+                
+            }
+        } else {
+            // 否则直接创建
+        }
+        
         // 是否开启强制更新
         // 选择创建项目或组件
         // 获取项目的基本信息
     }
 
-    isCwdEmpty () {
-        const localPath = process.cwd()
+    isDirEmpty (localPath) {
         let fileList = fs.readdirSync(localPath)
         fileList = fileList.filter(file => {
             return !file.startsWith('.') && ['node_modules'].indexOf(file) < 0
